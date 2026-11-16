@@ -1,20 +1,20 @@
-# DEFINIÇÃO DA CLASSE (Molde do objeto)
+
 class Consulta:
 
-    # Método Construtor: inicializa os atributos do objeto
+    
     def __init__(self, paciente, especialidade, valor, tem_convenio):
         self.paciente = paciente
         self.especialidade = especialidade
         self.__valor = valor  # Atributo privado (Encapsulamento)
         self.tem_convenio = tem_convenio
 
-    # Método para calcular o valor final (aplica 30% de desconto se tiver convênio)
+    
     def calcular_valor_final(self):
         if self.tem_convenio:
             return self.__valor * 0.70
         return self.__valor
 
-    # Método para exibir os dados da consulta formatados
+    
     def exibir_dados(self):
         tipo = "Convênio (30% OFF)" if self.tem_convenio else "Particular"
         valor_final = self.calcular_valor_final()
@@ -24,8 +24,8 @@ class Consulta:
         )
 
 
-# PROGRAMA PRINCIPAL (Menu de interação)
-agenda = []  # Lista que vai guardar os objetos criados
+
+agenda = []  
 
 while True:
     print("\n=== CLÍNICA MÉDICA (POO) ===")
@@ -46,7 +46,7 @@ while True:
             print("[ERRO] O valor deve ser maior que zero!")
         else:
             tem_convenio = conv == "s"
-            # INSTANCIAÇÃO: Criando o objeto 'nova_consulta' a partir da classe
+            
             nova_consulta = Consulta(nome, esp, valor, tem_convenio)
             agenda.append(nova_consulta)
             print("[SUCESSO] Consulta agendada!")
