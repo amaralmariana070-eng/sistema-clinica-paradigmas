@@ -5,7 +5,7 @@ class Consulta:
     def __init__(self, paciente, especialidade, valor, tem_convenio):
         self.paciente = paciente
         self.especialidade = especialidade
-        self.__valor = valor  # Atributo privado (Encapsulamento)
+        self.__valor = valor  
         self.tem_convenio = tem_convenio
 
     
